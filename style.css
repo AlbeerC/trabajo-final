@@ -1,0 +1,187 @@
+/* Estilos globales */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E7E7E7;
+}
+
+section {
+    margin: 5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom: 1px solid #e1e1e1;
+    /* https://html-css-js.com/css/generator/box-shadow */
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -22px -25px 1px -17px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, -22px -25px 1px -17px rgba(0,0,0,0);
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        cursor: default;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+
+        li {
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            
+            a {
+
+                &:hover {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+}
+
+/* Contenido principal */
+main {
+
+    .banner {
+
+        img {
+            display: block;
+            margin: 2rem auto;
+            border-radius: 2rem;
+        }
+    }
+
+    .offers-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+
+        .offer {
+            background-color: #ffffff;
+            width: 30rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem 0;
+            border-radius: 2rem;
+            transition: all ease 1000ms;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            p {
+                font-size: 2rem;
+                max-width: 70%;
+                text-align: center;
+            }
+
+            h3 {
+                color: #ff0000;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+            }
+
+            .bank {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    height: 5rem;
+                    width: 5rem;
+                }
+            }
+        }
+    }
+
+    .info {
+
+        p {
+            text-align: justify;
+            margin: 1rem 0;
+            font-size: 1.7rem;
+        }
+
+        img {
+            display: block;
+            margin: 2rem auto;
+        }
+    }
+}
+
+/* Pie de página */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    font-size: 1.7rem;
+    border-top: 1px solid #000000;
+    background-color: #ffffff;
+
+    .icons {
+
+        svg {
+            height: 3rem;
+            width: 3rem;
+            cursor: pointer;
+            margin: 0 .5rem;
+        }
+
+        .ig {
+                
+            &:hover {
+                color: #833AB4;
+            }
+        }
+        
+        .fb {
+
+            &:hover {
+                color: #4267B2;
+            }
+        }
+
+        .yt {
+
+            &:hover {
+                color: #ff0000;
+            }
+        }
+    }
+}
