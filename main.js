@@ -73,7 +73,32 @@ let products = [
     }
 ]
 
+// Aplicar 20% de descuento a un producto tomado por parámetro
+function applyDiscount (product) {
+    return product - (product * 20 / 100)
+}
 
+// Crear la card de los cuatro productos con descuento e insertarlas en el index.html
+function showDiscountedProducts () {
+    const container = document.getElementById("discount-products");
+
+    for (let i = 0; i < 4; i++) {
+        const item = products[i];
+        const productCard = document.createElement("div");
+        productCard.classList.add("card");
+        productCard.innerHTML = `
+            <img src="${item.image}" />
+            <h3>${item.product}</h3>
+            <p>$${Math.floor(applyDiscount(item.price))} <span>$${item.price}</span></p>
+        `
+
+        if (container) { container.appendChild(productCard) }
+    }
+}
+
+showDiscountedProducts();
+
+// Crear la carta de cada producto e insertarlas en products.html
 function createProductCard () {
     const container = document.getElementById("products-list");
 
@@ -83,7 +108,7 @@ function createProductCard () {
         productCard.innerHTML = `
             <img src="${item.image}" />
             <h3>${item.product}</h3>
-            <p>$${item.price}</p>
+            <p>$${Math.floor(applyDiscount(item.price))}</p>
             <div class="finish-buy">
                 <input type="number" class="input" placeholder="cantidad" min="0">
                 <button class="btn" type="submit">Comprar</button>
@@ -97,7 +122,7 @@ function createProductCard () {
 createProductCard();
 
 
-
+// Lógica para verificar si hay suficiente stock del producto que el usuario quiera comprar
 const inputs = document.querySelectorAll('.input');
 const buttons = document.querySelectorAll('.btn');
 let pricesArray = [];
@@ -117,43 +142,18 @@ function getValue (i) {
         pricesArray.push(inputValue * productPrice);
     }
 
+    // Después de clickear un botón y mostrar la alerta, se limpia el input para que vuelva a estar vacío
     inputs[i].value = "";
 
     // Insertar el total de la compra en HTML
     const totalText = document.getElementById("total");
-    let acumulador = 0;
+    let acc = 0;
     for (let i = 0; i < pricesArray.length; i++) {
-        acumulador += pricesArray[i];
+        acc += pricesArray[i];
     }
-    totalText.innerHTML = `$${acumulador}`
+    totalText.innerHTML = `$${acc}`
 }
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", () => getValue(i));
 }
-
-
-// Productos en descuento
-
-function discount (product) {
-    return product - (product * 20 / 100)
-}
-
-function showDiscountProducts () {
-    const container = document.getElementById("discount-products");
-
-    for (let i = 0; i < 4; i++) {
-        const product = products[i];
-        const div = document.createElement("div");
-        div.classList.add("card")
-        div.innerHTML = `
-            <img src="${product.image}" />
-            <h3>${product.product}</h3>
-            <p>$${Math.floor(discount(product.price))}</p>
-        `
-
-        if (container) { container.appendChild(div) }
-    }
-}
-
-showDiscountProducts();

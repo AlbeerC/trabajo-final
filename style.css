@@ -79,7 +79,7 @@ main {
             display: block;
             margin: 2rem auto;
             border-radius: 2rem;
-            width: 100rem;
+            width: 100%;
             height: auto;
         }
     }
@@ -87,12 +87,11 @@ main {
     .offers-list {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 5rem;
+        justify-content: space-between;
 
         .offer {
             background-color: #ffffff;
-            width: 30rem;
+            width: 35rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -223,6 +222,12 @@ footer {
     p {
         font-size: 2.4rem;
         font-weight: bold;
+
+        span {
+            color: #a7a7a7;
+            font-size: 1.8rem;
+            text-decoration: line-through;
+        }
     }
 
     h3 {
