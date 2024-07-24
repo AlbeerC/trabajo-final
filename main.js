@@ -70,6 +70,30 @@ let products = [
         price: 850,
         stock: 18,
         image: "./assets/mayonesa.webp"
+    },
+    {
+        product: "Galletitas Oreo rellenas sabor original 354G",
+        price: 3200,
+        stock: 25,
+        image: "./assets/oreo-tri.webp"
+    },
+    {
+        product: "Yerba suave playadito 1kg",
+        price: 3700,
+        stock: 40,
+        image: "./assets/yerba-playadito.webp"
+    },
+    {
+        product: "Arroz blanco Molinos Ala 1kg",
+        price: 1700,
+        stock: 33,
+        image: "./assets/arroz-blanco.webp"
+    },
+    {
+        product: "Galletitas chocolinas original 250g",
+        price : 1300,
+        stock: 30,
+        image: "./assets/chocolinas.webp"
     }
 ]
 
