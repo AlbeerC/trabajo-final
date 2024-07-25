@@ -44,21 +44,21 @@
                     <h2>Enviar una consulta</h2>
                     <div class="field">
                         <label for="name">Nombre y apellido</label>
-                        <input type="text" required>
+                        <input type="text" required id="name">
                     </div>
                     <div class="field">
                         <label for="email">E-mail</label>
-                        <input type="email" required>
+                        <input type="email" required id="email">
                     </div>
                     <div class="field">
                         <label for="phone">Teléfono</label>
-                        <input type="number" required>
+                        <input type="number" required id="phone">
                     </div>
                     <div class="field">
-                        <label for="asunt">Asunto</label>
-                        <textarea name="asunt"></textarea>
+                        <label for="subject">Asunto</label>
+                        <textarea name="subject" id="subject"></textarea>
                     </div>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" id="btnSubmit">Enviar</button>
                 </form>
             </div>  
         </section>
@@ -80,5 +80,7 @@
         </div>
     </footer>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
 </body>
 </html>

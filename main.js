@@ -99,7 +99,7 @@ let products = [
 
 // Aplicar 20% de descuento a un producto tomado por parámetro
 function applyDiscount (product) {
-    return product - (product * 20 / 100)
+    return product - (product * 30 / 100)
 }
 
 // Crear la card de los cuatro productos con descuento e insertarlas en el index.html
@@ -182,3 +182,23 @@ function getValue (i) {
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", () => getValue(i));
 }
+
+
+// Guardar los datos del form en un txt
+const names = document.getElementById("name")
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const btnSubmit = document.getElementById("btnSubmit");
+let info = [];
+
+btnSubmit.addEventListener("click", (e) => {
+    e.preventDefault();
+    info = [names.value, email.value, phone.value, subject.value];
+
+    let blob = new Blob([info], {type: "text/plain;charset=utf-8"});
+
+    if (info[0] !== "" && info[1] !== "" && info[2] !== "") {
+        saveAs(blob, "form.txt");
+    }
+})

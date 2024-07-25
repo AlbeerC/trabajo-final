@@ -73,7 +73,7 @@ header {
         img {
             display: block;
             margin: 2rem auto;
-            border-radius: 2rem;
+            border-radius: 1rem;
             width: 100%;
             height: auto;
         }
@@ -92,8 +92,13 @@ header {
             align-items: center;
             gap: 2rem;
             padding: 2rem 0;
-            border-radius: 2rem;
+            border-radius: 1rem;
             cursor: pointer;
+            transition: all ease 1000ms;
+
+            &:hover {
+                transform: scale(1.03);
+            }
 
             p {
                 font-size: 2rem;
@@ -138,9 +143,17 @@ header {
             font-size: 1.7rem;
         }
 
-        img {
-            display: block;
-            margin: 2rem auto;
+        .images {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                width: 47%;
+                height: 35rem;
+                border-radius: 1rem;
+            }
         }
     }
 }
@@ -167,7 +180,7 @@ footer {
         .ig {
                 
             &:hover {
-                color: #833AB4;
+                color: #C13584;
             }
         }
         
@@ -190,8 +203,22 @@ footer {
 
 /* Lista de productos */
 
-.total-buy {
-    margin: 5rem 0 0 6rem;
+.payments {
+    display: flex;
+    align-items: baseline;
+    gap: 3rem;
+
+    .total-buy {
+        margin: 5rem 0 0 6rem;
+    }
+
+    select {
+        padding: .5rem 1rem;
+        background-color: #ffffff;
+        border-radius: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
 }
 
 #products-list {
@@ -208,6 +235,7 @@ footer {
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
+    border-radius: 1rem;
 
     img {
         width: 100%;
@@ -238,6 +266,7 @@ footer {
             width: 50%;
             padding: .5rem 0;
             font-size: 1.6rem;
+            text-align: center;
         }
 
         button {
@@ -254,7 +283,7 @@ footer {
 
 /* Contacto */
 .contact-main {
-    margin-top: 5rem;
+    margin: 5rem 0;
     min-height: 100vh;
 
     h1 {
@@ -298,6 +327,19 @@ footer {
                     width: 5rem;
                     cursor: pointer;
                     padding: .2rem;
+                    border-radius: 1rem;
+                }
+
+                .ig {
+                    background-color: #C13584;
+                }
+
+                .fb {
+                    background-color: #4267B2;
+                }
+
+                .yt {
+                    background-color: #ff0000;
                 }
             }
         }
@@ -322,7 +364,7 @@ footer {
     
                     input {
                         width: 100%;
-                        padding: 1rem;
+                        padding: .5rem;
                         font-size: 2rem;
                     }
                     
