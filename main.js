@@ -1,7 +1,7 @@
 let products = [
     {
         product: "Nescafé dolca suave",
-        price: 3299,
+        price: 3799,
         stock: 15,
         image: "assets/nescafe-dolca.webp"
     },
@@ -132,7 +132,7 @@ function createProductCard () {
         productCard.innerHTML = `
             <img src="${item.image}" />
             <h3>${item.product}</h3>
-            <p>$${Math.floor(applyDiscount(item.price))}</p>
+            <p>$${item.price}</p>
             <div class="finish-buy">
                 <input type="number" class="input" placeholder="cantidad" min="0">
                 <button class="btn" type="submit">Comprar</button>
@@ -178,6 +178,7 @@ function getValue (i) {
     totalText.innerHTML = `$${acc}`
 }
 
+// Recorremos todos los botones y usamos el índice como argumento para la función
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", () => getValue(i));
 }

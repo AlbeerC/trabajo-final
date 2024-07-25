@@ -31,11 +31,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 5rem;
-    position: sticky;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
     background-color: #ffffff;
     color: #000000;
     border-bottom: 1px solid #e1e1e1;
@@ -71,7 +66,7 @@ header {
 }
 
 /* Contenido principal */
-main {
+.main-view {
 
     .banner {
 
@@ -252,6 +247,104 @@ footer {
             font-size: 1.6rem;
             font-weight: bold;
             cursor: pointer;
+        }
+    }
+}
+
+
+/* Contacto */
+.contact-main {
+    margin-top: 5rem;
+    min-height: 100vh;
+
+    h1 {
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 4rem;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+        align-items: flex-start;
+        font-size: 2rem;
+
+        .left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            p span {
+                font-weight: bold;
+            }
+
+            h3 {
+                border-top: 1px solid #000000;
+                padding-top: 1rem;
+                font-size: 3rem;
+            }
+
+            .icons {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+
+                svg {
+                    background-color: #000000;
+                    color: #ffffff;
+                    height: 5rem;
+                    width: 5rem;
+                    cursor: pointer;
+                    padding: .2rem;
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+            background-color: #ffffff;
+            padding: 2rem;
+
+            form {
+
+                .field {
+                    margin: 2rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+    
+                    label {
+                        font-weight: bold;
+                    }
+    
+                    input {
+                        width: 100%;
+                        padding: 1rem;
+                        font-size: 2rem;
+                    }
+                    
+                    textarea {
+                        width: 70%;
+                        height: 12rem;
+                    }
+                }
+            }
+
+            button {
+                background-color: #ff0000;
+                color: #ffffff;
+                padding: 1rem 3rem;
+                cursor: pointer;
+                border: none;
+                border-radius: 1rem;
+                font-size: 2.5rem;
+                font-weight: bold;
+                display: block;
+                margin: 0 auto;
+            }
         }
     }
 }
