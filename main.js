@@ -134,7 +134,7 @@ function createProductCard () {
             <h3>${item.product}</h3>
             <p>$${item.price}</p>
             <div class="finish-buy">
-                <input type="number" class="input" placeholder="cantidad" min="0">
+                <input type="number" class="input" placeholder=cantidad min="0">
                 <button class="btn" type="submit">Comprar</button>
             </div>
         `
@@ -164,6 +164,7 @@ function getValue (i) {
     } else {
         alert(`Agregado ${inputValue} ${productName}. Total: $${inputValue * productPrice}`);
         pricesArray.push(inputValue * productPrice);
+        products[i].stock = products[i].stock - inputValue;
     }
 
     // Después de clickear un botón y mostrar la alerta, se limpia el input para que vuelva a estar vacío
