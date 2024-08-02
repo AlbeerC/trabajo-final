@@ -194,7 +194,6 @@ const btnSubmit = document.getElementById("btnSubmit");
 let info = [];
 
 btnSubmit.addEventListener("click", (e) => {
-    e.preventDefault();
     info = [names.value, email.value, phone.value, subject.value];
 
     let blob = new Blob([info], {type: "text/plain;charset=utf-8"});
